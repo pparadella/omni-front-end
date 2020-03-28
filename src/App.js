@@ -1,17 +1,13 @@
-import React, { useState } from 'react';
-import Header from './Header';
+import React from 'react';
+import Logon from './pages/Logon';
+
+import './global.css';
 
 function App() {
-  let [contador, setContador] = useState(0);
 
-  function increment(){
-    setContador(contador + 1);
-  }
-  
   return (
     <div>
-      <Header>Contador: {contador}</Header>
-      <button onClick={increment}>Incrementar</button>
+      <Logon />
     </div>
   ); 
 }
