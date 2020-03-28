@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './Header';
 
 function App() {
+  let [contador, setContador] = useState(0);
+
+  function increment(){
+    setContador(contador + 1);
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello World!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header>Contador: {contador}</Header>
+      <button onClick={increment}>Incrementar</button>
     </div>
-  );
+  ); 
 }
 
 export default App;
